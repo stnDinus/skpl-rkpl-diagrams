@@ -1,0 +1,29 @@
+@startuml
+state "Konfigurasi Pesanan" as Konfigurasi : Pembeli unggah desain & atur parameter
+state "Menunggu Persetujuan Penjual" as MenungguPersetujuan : Pesanan menunggu ditinjau oleh penjual
+state "Menunggu Revisi Pembeli" as MenungguRevisi : Penjual meminta revisi pada desain
+state "Menunggu Pembayaran" as MenungguBayar : Desain disetujui, menunggu pembayaran dari pembeli
+state "Dalam Produksi" as Produksi : Pesanan sedang dalam proses produksi/pencetakan
+state "Dalam Pengiriman" as Pengiriman : Pesanan yang sudah jadi dikirim ke alamat pembeli
+state "Selesai" as Selesai : Pembeli telah menerima pesanan
+state "Dibatalkan" as Dibatalkan : Pesanan dibatalkan karena ditolak atau oleh pembeli
+
+[*] --> Konfigurasi : Pembeli mengajukan desain
+Konfigurasi --> MenungguPersetujuan : Konfirmasi pesanan
+
+MenungguPersetujuan --> MenungguBayar : Desain disetujui oleh penjual
+MenungguPersetujuan --> MenungguRevisi : Penjual meminta revisi
+MenungguPersetujuan --> Dibatalkan : Desain ditolak oleh penjual
+
+MenungguRevisi --> MenungguPersetujuan : Pembeli mengunggah revisi
+
+MenungguBayar --> Produksi : Pembayaran berhasil
+MenungguBayar --> Dibatalkan : Dibatalkan oleh pembeli
+
+Produksi --> Pengiriman : Proses produksi selesai
+Pengiriman --> Selesai : Pesanan diterima pembeli
+
+Selesai --> [*]
+Dibatalkan --> [*]
+
+@enduml
