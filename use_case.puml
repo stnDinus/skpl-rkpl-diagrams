@@ -6,6 +6,7 @@ actor Penjual as seller
 
 (Pendaftaran) as signup
 (Masuk) as signin
+(Keluar) as signout
 (Unggah Desain) as upload_design
 (Penyesuaian Parameter Cetak) as set_print_parameters
 (Melihat Estimasi Harga) as check_est_price
@@ -17,8 +18,7 @@ actor Penjual as seller
 
 seller -- signup
 seller -- signin
-buyer -- signup
-buyer -- signin
+seller -- signout
 buyer -- upload_design
 buyer -- set_print_parameters
 buyer -- check_est_price
