@@ -1,0 +1,31 @@
+@startuml
+
+node "Platform Serverless / CDN\n(Vercel, GitHub Pages)" as Cdn {
+  artifact "Aplikasi Web (Frontend)" as WebApp
+}
+
+node "Perangkat Pengguna" {
+  node "Web Browser" as Browser
+}
+
+node "Server VPS" {
+  node "Container Engine (Docker/Podman)" {
+    node "Container: GraphQL API" as ApiContainer {
+      artifact "GraphQL API"
+    }
+    database "Container: Database" as DbContainer {
+      artifact "DBMS"
+    }
+  }
+}
+
+' 1. Browser memuat frontend dari CDN
+Browser -> WebApp : Memuat Aplikasi (HTTPS)
+
+' 2. Aplikasi di browser berkomunikasi dengan API
+Browser -> ApiContainer : Menggunakan API (HTTPS, GraphQL)
+
+' 3. API berkomunikasi dengan Database
+ApiContainer -> DbContainer : Koneksi Internal (TCP)
+
+@enduml
