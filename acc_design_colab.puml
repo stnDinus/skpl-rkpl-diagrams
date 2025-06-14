@@ -1,0 +1,8 @@
+@startuml
+boundary AccDesignPage
+entity DesignOrder
+control Notification
+
+(AccDesignPage) -> (DesignOrder): updateStatus(action)
+(DesignOrder) -> (Notification): sendToBuyer(status)
+@enduml

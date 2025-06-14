@@ -1,0 +1,12 @@
+@startuml
+|Pembeli|
+start
+:Memilih desain yang sudah diunggah;
+:Mengatur parameter (ukuran, bahan, jumlah);
+:Simpan parameter;
+|Sistem|
+:Menyimpan konfigurasi parameter;
+:Menampilkan hasil penyesuaian;
+|Pembeli|
+stop
+@enduml

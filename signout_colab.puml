@@ -1,0 +1,6 @@
+@startuml
+boundary HomePage
+control Session
+
+(HomePage) -> (Session): destroy()
+@enduml

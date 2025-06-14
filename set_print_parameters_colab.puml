@@ -1,0 +1,6 @@
+@startuml
+boundary PrintParametersPage
+entity PrintConfig
+
+(PrintParametersPage) -> (PrintConfig): save(params)
+@enduml

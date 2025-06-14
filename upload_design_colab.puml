@@ -1,0 +1,6 @@
+@startuml
+boundary UploadDesignPage
+entity Design
+
+(UploadDesignPage) -> (Design): create(fileData)
+@enduml

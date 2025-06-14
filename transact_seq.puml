@@ -1,0 +1,19 @@
+@startuml
+actor Pembeli
+boundary PaymentPage
+control PaymentGateway
+entity Order
+
+Pembeli -> PaymentPage : pay()
+activate PaymentPage
+PaymentPage -> PaymentGateway : processPayment(details)
+activate PaymentGateway
+PaymentGateway -> Order : updatePaymentStatus(success)
+activate Order
+Order --> PaymentGateway : statusUpdated()
+deactivate Order
+PaymentGateway --> PaymentPage : paymentSuccess()
+deactivate PaymentGateway
+PaymentPage --> Pembeli : displaySuccessMessage()
+deactivate PaymentPage
+@enduml

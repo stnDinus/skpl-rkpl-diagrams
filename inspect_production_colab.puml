@@ -1,0 +1,6 @@
+@startuml
+boundary OrderDetailPage
+entity Order
+
+(OrderDetailPage) -> (Order): getProductionStatus()
+@enduml

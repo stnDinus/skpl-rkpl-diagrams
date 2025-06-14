@@ -1,0 +1,8 @@
+@startuml
+boundary ShippingPage
+control ShippingCostCalculator
+entity Order
+
+(ShippingPage) -> (ShippingCostCalculator): calculate(address, courier)
+(ShippingPage) -> (Order): addShippingCost(shippingCost)
+@enduml

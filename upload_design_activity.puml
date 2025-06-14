@@ -1,0 +1,12 @@
+@startuml
+|Pembeli|
+start
+:Pilih file desain;
+:Klik tombol unggah;
+|Sistem|
+:Validasi file;
+:Simpan file desain;
+:Tampilkan notifikasi berhasil dan pratinjau;
+|Pembeli|
+stop
+@enduml

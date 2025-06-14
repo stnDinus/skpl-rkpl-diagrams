@@ -1,17 +1,15 @@
 @startuml
-
-|pembeli|
+|Pembeli|
 start
-:isi email dan password;
-
-|sistem|
-:kirim link konfirmasi pembuatan akun ke email pembeli;
-
-|pembeli|
-:konfirmasi pembuatan akun melalui email;
-
-|sistem|
-:simpan data akun;
+:Mengisi form pendaftaran (email, password, dll);
+|Sistem|
+:Validasi data;
+:Mengirim link konfirmasi ke email;
+|Pembeli|
+:Membuka email dan klik link konfirmasi;
+|Sistem|
+:Verifikasi token konfirmasi;
+:Simpan data akun pembeli;
+:Menampilkan notifikasi pendaftaran berhasil;
 stop
-
 @enduml

@@ -1,0 +1,6 @@
+@startuml
+boundary LoginPage
+control Session
+
+(LoginPage) -> (Session): create(email, password)
+@enduml

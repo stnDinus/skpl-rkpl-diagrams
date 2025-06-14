@@ -1,0 +1,11 @@
+@startuml
+|Pembeli|
+start
+:Buka menu 'Riwayat Transaksi';
+|Sistem|
+:Mengambil semua data transaksi milik pembeli;
+:Menampilkan daftar riwayat transaksi;
+|Pembeli|
+:Melihat daftar transaksi;
+stop
+@enduml

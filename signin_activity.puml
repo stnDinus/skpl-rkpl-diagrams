@@ -1,0 +1,15 @@
+@startuml
+|Pembeli|
+start
+:Masukkan email dan password;
+|Sistem|
+:Validasi kredensial;
+if (Kredensial valid?) then (ya)
+  :Buat sesi login;
+  :Tampilkan halaman utama pembeli;
+else (tidak)
+  :Tampilkan pesan error;
+endif
+|Pembeli|
+stop
+@enduml

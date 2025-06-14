@@ -1,0 +1,13 @@
+@startuml
+|Pembeli|
+start
+:Mengisi alamat pengiriman;
+:Memilih jasa kurir;
+|Sistem|
+:Menghitung biaya ongkir berdasarkan alamat dan kurir;
+:Menampilkan rincian biaya ongkir;
+:Menambahkan ongkir ke total tagihan;
+|Pembeli|
+:Konfirmasi pilihan pengiriman;
+stop
+@enduml

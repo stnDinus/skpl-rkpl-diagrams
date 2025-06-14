@@ -1,0 +1,8 @@
+@startuml
+boundary PaymentPage
+control PaymentGateway
+entity Order
+
+(PaymentPage) -> (PaymentGateway): processPayment(details)
+(PaymentGateway) -> (Order): updatePaymentStatus(success)
+@enduml

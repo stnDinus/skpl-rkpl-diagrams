@@ -1,0 +1,14 @@
+@startuml
+actor Pembeli
+boundary HomePage
+control Session
+
+Pembeli -> HomePage : logout()
+activate HomePage
+HomePage -> Session : destroy()
+activate Session
+Session --> HomePage : sessionDestroyed()
+deactivate Session
+HomePage --> Pembeli : Redirect ke halaman utama
+deactivate HomePage
+@enduml

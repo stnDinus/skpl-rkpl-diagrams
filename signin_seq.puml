@@ -1,0 +1,14 @@
+@startuml
+actor Pembeli
+boundary LoginPage
+control Session
+
+Pembeli -> LoginPage : submit(email, password)
+activate LoginPage
+LoginPage -> Session : create(email, password)
+activate Session
+Session --> LoginPage : loginSuccess()
+deactivate Session
+LoginPage --> Pembeli : Redirect ke halaman utama
+deactivate LoginPage
+@enduml

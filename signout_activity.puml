@@ -1,0 +1,10 @@
+@startuml
+|Pembeli|
+start
+:Klik tombol keluar;
+|Sistem|
+:Hapus sesi login;
+:Redirect ke halaman utama;
+|Pembeli|
+stop
+@enduml

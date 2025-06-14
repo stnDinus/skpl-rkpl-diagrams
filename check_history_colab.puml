@@ -1,0 +1,6 @@
+@startuml
+boundary HistoryPage
+entity Order
+
+(HistoryPage) -> (Order): findAllByBuyer()
+@enduml

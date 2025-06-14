@@ -2,6 +2,5 @@
 boundary SignUpPage
 entity Account
 
-(SignUpPage) -> (Account): new(email, password)
-
+(SignUpPage) -> (Account): create(data_pendaftaran)
 @enduml

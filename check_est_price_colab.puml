@@ -1,0 +1,6 @@
+@startuml
+boundary PrintParametersPage
+control PriceEstimator
+
+(PrintParametersPage) -> (PriceEstimator): calculate(params)
+@enduml

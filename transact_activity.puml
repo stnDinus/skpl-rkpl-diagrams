@@ -1,0 +1,16 @@
+@startuml
+|Pembeli|
+start
+:Memeriksa rincian pesanan (harga, ongkir);
+:Klik tombol 'Bayar';
+:Memilih metode pembayaran;
+:Melakukan transfer / pembayaran;
+|Sistem|
+:Redirect ke payment gateway;
+:Menerima konfirmasi pembayaran;
+:Update status pesanan menjadi 'Dibayar';
+:Kirim notifikasi ke pembeli dan penjual;
+|Pembeli|
+:Menerima notifikasi pembayaran berhasil;
+stop
+@enduml

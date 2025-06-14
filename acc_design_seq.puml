@@ -1,0 +1,19 @@
+@startuml
+actor Penjual
+boundary AccDesignPage
+entity DesignOrder
+control Notification
+
+Penjual -> AccDesignPage : submitAction(orderId, action)
+activate AccDesignPage
+AccDesignPage -> DesignOrder : updateStatus(action)
+activate DesignOrder
+DesignOrder -> Notification : sendToBuyer(status)
+activate Notification
+Notification --> DesignOrder : success()
+deactivate Notification
+DesignOrder --> AccDesignPage : statusUpdated()
+deactivate DesignOrder
+AccDesignPage --> Penjual : Tampilkan konfirmasi
+deactivate AccDesignPage
+@enduml

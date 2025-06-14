@@ -1,0 +1,14 @@
+@startuml
+actor Pembeli
+boundary PrintParametersPage
+entity PrintConfig
+
+Pembeli -> PrintParametersPage : setParameters(params)
+activate PrintParametersPage
+PrintParametersPage -> PrintConfig : save(params)
+activate PrintConfig
+PrintConfig --> PrintParametersPage : success()
+deactivate PrintConfig
+PrintParametersPage --> Pembeli : displayConfirmation()
+deactivate PrintParametersPage
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+|Pembeli|
+start
+:Buka halaman riwayat pesanan;
+:Pilih pesanan yang ingin dipantau;
+|Sistem|
+:Mengambil status produksi terakhir dari database;
+:Menampilkan tahapan produksi (misal: 'desain diterima', 'pencetakan', 'pengemasan', 'dikirim');
+|Pembeli|
+stop
+@enduml

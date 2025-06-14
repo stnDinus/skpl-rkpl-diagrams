@@ -1,0 +1,19 @@
+@startuml
+actor Pembeli
+boundary ShippingPage
+control ShippingCostCalculator
+entity Order
+
+Pembeli -> ShippingPage : setShipping(address, courier)
+activate ShippingPage
+ShippingPage -> ShippingCostCalculator : calculate(address, courier)
+activate ShippingCostCalculator
+ShippingCostCalculator --> ShippingPage : shippingCost
+deactivate ShippingCostCalculator
+ShippingPage -> Order : addShippingCost(shippingCost)
+activate Order
+Order --> ShippingPage : success()
+deactivate Order
+ShippingPage --> Pembeli : displayTotal()
+deactivate ShippingPage
+@enduml

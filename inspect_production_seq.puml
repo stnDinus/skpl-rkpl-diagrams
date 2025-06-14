@@ -1,0 +1,14 @@
+@startuml
+actor Pembeli
+boundary OrderDetailPage
+entity Order
+
+Pembeli -> OrderDetailPage : viewProductionStatus(orderId)
+activate OrderDetailPage
+OrderDetailPage -> Order : getProductionStatus()
+activate Order
+Order --> OrderDetailPage : currentStatus
+deactivate Order
+OrderDetailPage --> Pembeli : displayStatus(currentStatus)
+deactivate OrderDetailPage
+@enduml

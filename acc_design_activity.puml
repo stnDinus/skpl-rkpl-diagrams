@@ -1,0 +1,12 @@
+@startuml
+|Penjual|
+start
+:Melihat detail pesanan desain masuk;
+:Pilih tindakan (Terima/Tolak/Revisi);
+|Sistem|
+:Update status pesanan desain;
+:Kirim notifikasi ke pembeli;
+|Penjual|
+:Menerima konfirmasi update;
+stop
+@enduml

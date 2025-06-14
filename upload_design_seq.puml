@@ -1,0 +1,14 @@
+@startuml
+actor Pembeli
+boundary UploadDesignPage
+entity Design
+
+Pembeli -> UploadDesignPage : upload(file)
+activate UploadDesignPage
+UploadDesignPage -> Design : create(fileData)
+activate Design
+Design --> UploadDesignPage : success(fileUrl)
+deactivate Design
+UploadDesignPage --> Pembeli : Tampilkan konfirmasi dan pratinjau
+deactivate UploadDesignPage
+@enduml

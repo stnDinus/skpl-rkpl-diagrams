@@ -1,0 +1,14 @@
+@startuml
+actor Pembeli
+boundary HistoryPage
+entity Order
+
+Pembeli -> HistoryPage : viewHistory()
+activate HistoryPage
+HistoryPage -> Order : findAllByBuyer()
+activate Order
+Order --> HistoryPage : orderList
+deactivate Order
+HistoryPage --> Pembeli : displayHistory(orderList)
+deactivate HistoryPage
+@enduml
