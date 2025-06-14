@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+actor Pembeli as buyer
+actor Penjual as seller
+
+(Pendaftaran) as signup
+(Masuk) as signin
+(Unggah Desain) as upload_design
+(Penyesuaian Parameter Cetak) as set_print_parameters
+(Melihat Estimasi Harga) as check_est_price
+(Terima/Tolak/Request Revisi Desain) as acc_design
+(Melakukan Pembayaran) as transact
+(Pemiliihan Ongkir) as set_shipping
+(Memantau Tahapan Produksi) as inspect_production
+(Meilhat Riwayat) as check_history
+
+seller -- signup
+seller -- signin
+buyer -- signup
+buyer -- signin
+buyer -- upload_design
+buyer -- set_print_parameters
+buyer -- check_est_price
+seller -- acc_design
+buyer -- set_shipping
+buyer -- transact
+buyer -- inspect_production
+buyer -- check_history
+
+@enduml
