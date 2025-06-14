@@ -16,9 +16,9 @@ actor Penjual as seller
 (Memantau Tahapan Produksi) as inspect_production
 (Meilhat Riwayat) as check_history
 
-seller -- signup
-seller -- signin
-seller -- signout
+buyer -- signup
+buyer -- signin
+buyer -- signout
 buyer -- upload_design
 buyer -- set_print_parameters
 buyer -- check_est_price
