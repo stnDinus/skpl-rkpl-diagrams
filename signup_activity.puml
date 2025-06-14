@@ -1,0 +1,17 @@
+@startuml
+
+|pembeli|
+start
+:isi email dan password;
+
+|sistem|
+:kirim link konfirmasi pembuatan akun ke email pembeli;
+
+|pembeli|
+:konfirmasi pembuatan akun melalui email;
+
+|sistem|
+:simpan data akun;
+stop
+
+@enduml

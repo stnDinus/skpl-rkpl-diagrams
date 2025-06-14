@@ -1,0 +1,10 @@
+@startuml
+actor Pembeli
+boundary SignUpPage
+entity Account
+
+Pembeli -> SignUpPage: isi email/password
+SignUpPage -> Pembeli: kirim link konfirmasi pembuatan akun ke email pembeli
+SignUpPage -> Account: buat akun baru
+
+@enduml
