@@ -1,0 +1,101 @@
+@startuml
+left to right direction
+hide empty members
+
+' --- ENTITIES ---
+entity Account {
+  - accountId: String
+  - email: String
+  # passwordHash: String
+  + create(data): Account
+}
+
+entity Design {
+  - desainId: String
+  - fileUrl: String
+  + create(fileData): Design
+}
+
+entity PrintConfig {
+  - configId: String
+  - params: Map
+  + save(params): void
+}
+
+entity Order {
+  - orderId: String
+  - status: String
+  - total: double
+  + updateStatus(action): void
+  + updatePaymentStatus(isSuccess): void
+  + addShippingCost(cost): void
+  + getProductionStatus(): String
+  + findAllByBuyer(): List<Order>
+}
+
+
+' --- BOUNDARY / PAGES ---
+abstract Page
+class SignUpPage
+class LoginPage
+class HomePage
+class AccDesignPage
+class UploadDesignPage
+class PrintParametersPage
+class PaymentPage
+class ShippingPage
+class OrderDetailPage
+class HistoryPage
+
+
+' --- CONTROL ---
+class Session {
+  + create(credentials): Session
+  + destroy(): void
+}
+
+class Notification {
+  + sendToBuyer(status): void
+}
+
+class PriceEstimator {
+  + calculate(params): double
+}
+
+class PaymentGateway {
+  + processPayment(details): boolean
+}
+
+class ShippingCostCalculator {
+  + calculate(address, courier): double
+}
+
+' --- Inheritance ---
+Page --|> SignUpPage
+Page --|> LoginPage
+Page --|> HomePage
+Page --|> AccDesignPage
+Page --|> UploadDesignPage
+Page --|> PrintParametersPage
+Page --|> PaymentPage
+Page --|> ShippingPage
+Page --|> OrderDetailPage
+Page --|> HistoryPage
+
+' --- Weak Dependencies ---
+SignUpPage ..> Account
+LoginPage ..> Session
+HomePage ..> Session
+UploadDesignPage ..> Design
+PrintParametersPage ..> PrintConfig
+PrintParametersPage ..> PriceEstimator
+AccDesignPage ..> Order
+AccDesignPage ..> Notification
+PaymentPage ..> PaymentGateway
+PaymentGateway ..> Order
+ShippingPage ..> ShippingCostCalculator
+ShippingPage ..> Order
+OrderDetailPage ..> Order
+HistoryPage ..> Order
+
+@enduml
