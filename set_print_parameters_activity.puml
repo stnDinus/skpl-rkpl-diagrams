@@ -2,10 +2,9 @@
 |Pembeli|
 start
 :Memilih desain yang sudah diunggah;
-:Mengatur parameter (ukuran, bahan, jumlah);
-:Simpan parameter;
+:Mengatur parameter (filamen, layer, warna, etc);
 |Sistem|
-:Menyimpan konfigurasi parameter;
+:Simpan;
 :Menampilkan hasil penyesuaian;
 |Pembeli|
 stop
