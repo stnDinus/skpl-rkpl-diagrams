@@ -3,8 +3,6 @@ actor Pembeli
 boundary PrintParametersPage
 control PriceEstimator
 
-Pembeli -> PrintParametersPage : parametersChanged(params)
-activate PrintParametersPage
 PrintParametersPage -> PriceEstimator : calculate(params)
 activate PriceEstimator
 PriceEstimator --> PrintParametersPage : estimatedPrice

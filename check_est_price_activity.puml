@@ -1,10 +1,7 @@
 @startuml
-|Pembeli|
-start
-:Mengatur parameter cetak;
 |Sistem|
-:Menerima perubahan parameter;
-:Menghitung estimasi harga berdasarkan parameter;
+start
+:Menghitung estimasi harga;
 :Menampilkan estimasi harga;
 |Pembeli|
 stop
