@@ -1,4 +1,5 @@
 @startuml
+skinparam backgroundColor transparent
 |Penjual|
 start
 :Melihat detail pesanan desain masuk;

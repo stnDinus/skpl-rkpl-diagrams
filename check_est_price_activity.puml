@@ -1,4 +1,5 @@
 @startuml
+skinparam backgroundColor transparent
 |Sistem|
 start
 :Menghitung estimasi harga;

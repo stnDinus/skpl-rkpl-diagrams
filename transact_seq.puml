@@ -1,4 +1,5 @@
 @startuml
+skinparam backgroundColor transparent
 actor Pembeli
 boundary PaymentPage
 control PaymentGateway

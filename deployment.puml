@@ -1,4 +1,5 @@
 @startuml
+skinparam backgroundColor transparent
 
 node "Platform Serverless / CDN\n(Vercel, GitHub Pages)" as Cdn {
   artifact "Aplikasi Web (Frontend)" as WebApp

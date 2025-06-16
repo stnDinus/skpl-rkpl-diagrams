@@ -1,4 +1,5 @@
 @startuml
+skinparam backgroundColor transparent
 state "Konfigurasi Pesanan" as Konfigurasi : Pembeli unggah desain & atur parameter
 state "Menunggu Persetujuan Penjual" as MenungguPersetujuan : Pesanan menunggu ditinjau oleh penjual
 state "Menunggu Revisi Pembeli" as MenungguRevisi : Penjual meminta revisi pada desain

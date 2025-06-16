@@ -1,4 +1,5 @@
 @startuml
+skinparam backgroundColor transparent
 |Pembeli|
 start
 :Buka menu 'Riwayat Transaksi';
