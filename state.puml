@@ -1,25 +1,30 @@
 @startuml
 skinparam backgroundColor transparent
-state "Konfigurasi Pesanan" as Konfigurasi : Pembeli unggah desain & atur parameter
+state "Akun Terbuat" as Registrasi: Pembeli telah melakukan pendaftaran akun
+state "Sesi Masuk Aktif" as Masuk: Pembeli masuk ke akun yang telah terdaftar
+state "Konfigurasi Pesanan" as Konfigurasi : Pembeli unggah desain, atur parameter, memilih ongkir
 state "Menunggu Persetujuan Penjual" as MenungguPersetujuan : Pesanan menunggu ditinjau oleh penjual
 state "Menunggu Revisi Pembeli" as MenungguRevisi : Penjual meminta revisi pada desain
 state "Menunggu Pembayaran" as MenungguBayar : Desain disetujui, menunggu pembayaran dari pembeli
 state "Dalam Produksi" as Produksi : Pesanan sedang dalam proses produksi/pencetakan
 state "Dalam Pengiriman" as Pengiriman : Pesanan yang sudah jadi dikirim ke alamat pembeli
 state "Selesai" as Selesai : Pembeli telah menerima pesanan
-state "Dibatalkan" as Dibatalkan : Pesanan dibatalkan karena ditolak atau oleh pembeli
+state "Dibatalkan" as Dibatalkan : Pesanan ditolak atau dibatalkan oleh pembeli
 
-[*] --> Konfigurasi : Pembeli mengajukan desain
-Konfigurasi --> MenungguPersetujuan : Konfirmasi pesanan
+[*] --> Registrasi: Pembeli melakukan pendaftaran akun
+Registrasi --> Masuk
+Masuk -r-> Konfigurasi
+Konfigurasi --> MenungguPersetujuan : Pembeli memilih ongkir untuk melihat estimasi harga total sementara
 
 MenungguPersetujuan --> MenungguBayar : Desain disetujui oleh penjual
 MenungguPersetujuan --> MenungguRevisi : Penjual meminta revisi
 MenungguPersetujuan --> Dibatalkan : Desain ditolak oleh penjual
 
-MenungguRevisi --> MenungguPersetujuan : Pembeli mengunggah revisi
+MenungguRevisi --> Konfigurasi : Pembeli melakukan revisi
+MenungguRevisi --> Dibatalkan : Pembeli membatalkan revisi
 
 MenungguBayar --> Produksi : Pembayaran berhasil
-MenungguBayar --> Dibatalkan : Dibatalkan oleh pembeli
+MenungguBayar --> Dibatalkan : Pembeli membatalkan pembayaran
 
 Produksi --> Pengiriman : Proses produksi selesai
 Pengiriman --> Selesai : Pesanan diterima pembeli
