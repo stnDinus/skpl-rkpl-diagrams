@@ -1,0 +1,14 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Dashboard"
+  Selamat datang!
+  Aksi Cepat:
+  {
+    [ Cetak Model Baru ]
+    [ Lihat Riwayat Cetakan ]
+  }
+  {
+    [ Pengaturan Akun ] | [ Keluar ]
+  }
+}
+@endsalt

@@ -1,0 +1,16 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Lacak Cetakan #ORD-1400"
+  Status Saat Ini: <b>Mencetak (45%)</b>
+  --
+  "Tahapan Pesanan:"
+  {
+    (X) Model Diterima
+    (X) Pembayaran Diterima
+    (X) <b>Mencetak</b>
+    ( ) Pembersihan & Finishing
+    ( ) Siap Dikirim
+  }
+  [ Kembali ke Riwayat ]
+}
+@endsalt

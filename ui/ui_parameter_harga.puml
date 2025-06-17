@@ -1,0 +1,16 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Atur Parameter Cetak 3D"
+  "Model: Part Robot v2"
+  {
+    "Tipe Filamen" | <"PLA+">
+    "Warna" | <"Merah">
+    "Layer Height" | <"0.2mm (Standar)">
+  }
+  --
+  {
+    "Estimasi Harga:" | "<b>Rp 250.000</b>"
+  }
+  [  Lanjutkan ke Pengiriman  ]
+}
+@endsalt

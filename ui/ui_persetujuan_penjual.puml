@@ -1,0 +1,13 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Persetujuan Cetakan #ORD-1337"
+  Model dari Pelanggan:
+  {
+    <size:50>🧊</size>
+    "part_robot_v2.stl"
+  }
+  {
+    [  Setujui Cetakan  ] | [  Minta Revisi Model  ] | [  Tolak Cetakan  ]
+  }
+}
+@endsalt

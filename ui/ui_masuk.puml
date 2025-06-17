@@ -1,0 +1,10 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Masuk Akun"
+  Email | "email@example.com"
+  Password | "••••••••••••"
+  Lupa Password? | [Reset]
+  [          Masuk          ]
+  Belum punya akun? | [Daftar]
+}
+@endsalt

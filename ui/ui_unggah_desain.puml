@@ -1,0 +1,15 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Unggah Model 3D"
+  Nama Model | "Contoh: Part Robot v2"
+  {
+    Pilih File Model (.stl, .obj, .step, .3mf)
+    [ Telusuri File... ] | { "part_robot_v2.stl" }
+  }
+  Pratinjau Model
+  {
+    <size:50>🧊</size>
+  }
+  [     Simpan Model & Lanjutkan     ]
+}
+@endsalt

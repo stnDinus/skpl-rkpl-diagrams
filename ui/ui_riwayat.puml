@@ -1,0 +1,12 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Riwayat Cetakan"
+  {
+     ID Pesanan | Tanggal | Total | Status
+     #ORD-1400 | 17 Jun 2025 | Rp 265.000 | Mencetak
+     #ORD-1337 | 10 Jun 2025 | Rp 150.000  | Selesai
+     #ORD-1150 | 28 Mei 2025 | Rp 500.000 | Dibatalkan
+  }
+  [ < Halaman Sebelumnya ] | [ Halaman Berikutnya > ]
+}
+@endsalt

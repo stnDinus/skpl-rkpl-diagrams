@@ -1,0 +1,19 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Rincian Pembayaran: #ORD-1337"
+  {
+    "Deskripsi" | "Harga"
+    "Cetak Model 3D (75g)" | "Rp 250.000"
+    "Ongkos Kirim" | "Rp 15.000"
+    "" | ""
+    "<b>Total</b>" | "<b>Rp 265.000</b>"
+  }
+  Pilih Metode Pembayaran:
+  {
+    (X) "Virtual Account"
+    ( ) "Kartu Kredit"
+    ( ) "QRIS"
+  }
+  [     Bayar Sekarang     ]
+}
+@endsalt

@@ -1,0 +1,15 @@
+@startsalt
+skinparam backgroundColor transparent
+{^"Pilih Pengiriman"
+  Alamat Pengiriman:
+  "Jalan Telekomunikasi No. 1, Terusan Buah Batu, Kota Semarang, Jawa Tengah, 50261"
+  --
+  Pilih Jasa Kurir:
+  {
+    (X) "JNE Reguler (2-3 hari) - Rp 15.000"
+    ( ) "J&T Express (1-2 hari) - Rp 18.000"
+    ( ) "TIKI Same Day (1 hari) - Rp 25.000"
+  }
+  [  Lanjutkan ke Pembayaran  ]
+}
+@endsalt
